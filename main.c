@@ -16,3 +16,8 @@ void inicializarQueue(Queue *q) {
     q->front = -1; //Inicializa o índice do elemento da frente como -1 (indicando fila vazia)
     q->rear = -1; // Inicializa o índice do elemento do final como -1 (indicando fila vazia)
 }
+
+// Função para verificar se a fila não está cheia
+int isEmpty(Queue *q) {
+    return (q->rear == -1 && q->front == -1); // Retorna verdadeiro se ambos os índices estiverem -1
+}
