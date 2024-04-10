@@ -41,3 +41,20 @@ void enqueue(Queue *q, int value) {
     q->items[q->rear] = value;// Adiciona o elemento ao final da fila
 }
 
+int main() {
+    Queue q;// Declara uma fila
+    inicializarQueue(&q); // Inicializa a fila
+
+    // Adiciona alguns elementos à fila
+    enqueue(&q, 10);
+    enqueue(&q, 40);
+
+    // Imprime todos os valores da fila
+    printf("Valores da fila: ");
+    for (int i = q.front; i <= q.rear; i++) {
+        printf("%d ", q.items[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
