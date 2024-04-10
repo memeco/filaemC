@@ -37,4 +37,7 @@ void enqueue(Queue *q, int value) {
         q->front = 0;
     }
 
+    q->rear++;//Incrementa o índice do final
+    q->items[q->rear] = value;// Adiciona o elemento ao final da fila
 }
+
