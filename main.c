@@ -24,5 +24,17 @@ int isEmpty(Queue *q) {
 
 // Função para verificar se a fila está cheia
 int isFull(Queue *q) {
-    return(q->rear == MAX_SIZE -1);
+    return(q->rear == MAX_SIZE -1);// Retorna verdadeiro se o índice do final for igual ao tamanho máximo - 1
+}
+
+// Função para adicionar um elemento à fila
+void enqueue(Queue *q, int value) {
+    if(isFull(q)) {// Verifica se a fila está cheia
+        printf("Queue is full.");
+        return;
+    }
+    if (isEmpty(q)) { // Se a fila estiver vazia, define o índice da frente como 0
+        q->front = 0;
+    }
+
 }
